@@ -5,7 +5,7 @@ import config
 
 PhotoDataWorker().start()
 app = Application()
-app.router.add_static('/public', config.STATIC_FOLDER)
+app.router.add_static('/static', config.STATIC_FOLDER)
 
 handler = Handler(app)
 app.add_routes([get('/', handler.handle_index)])
