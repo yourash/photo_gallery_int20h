@@ -1,60 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Momentum bots INT20H</title>
-    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="/public/style.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-  <a class="navbar-brand " href="#">MB INT20H</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Все<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Выбор эмоджи
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
-    <div class="spacer">
-        &nbsp;
+{% extends "base_template.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for photo in photos %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover shadow">
+                    <a class="lightbox" href="{{photo['url_o']}}">
+                        <img src="{{photo['url_m']}}" alt="{{photo['title']}}" class="card-img-top img">
+                    </a>
+                    <div class="card-body">
+                        <h6><a href="#">{{photo['title']}}</a></h6>
+                        <p class="text-muted card-text">{{photo['title']}}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    <div class="container">
-        <div class="row">
-            {% for photo in photos %}
-                <div class="col-md-6 col-lg-4">
-	                <div class="card border-0 transform-on-hover shadow">
-	                	<a class="lightbox" href="{{photo['url_s']}}">
-	                		<img src="{{photo['url_s']}}" alt="{{photo['title']}}" class="card-img-top">
-	                	</a>
-	                    <div class="card-body">
-	                        <h6><a href="#">{{photo['title']}}</a></h6>
-	                        <p class="text-muted card-text">{{photo['title']}}</p>
-	                    </div>
-	                </div>
-	            </div>
-            {% endfor %}
-        </div>
-    </div>
-</body>
-    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>-->
-    <script src="/public/jquery-3.3.1.min.js"></script>
-    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
-    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>-->
-</html>
+</div>
+{% endblock %}

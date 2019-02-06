@@ -6,7 +6,7 @@ class FlickrApi:
 
     def __init__(self):
         self.flickr = FlickrAPI(FLICKR_KEY, FLICKR_SECRET, format='parsed-json')
-        self.extras = 'url_s,url_q,url_o'
+        self.extras = 'url_s,url_m,url_o'
 
     def get_all_by_album(self, album, user):
         photos = {}
