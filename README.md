@@ -11,12 +11,14 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to run the software:
 
 ```
-Python3.6+, pip3
+Python3.6+, pip3, MongoDB
 ```
 
 ### Installing
 
 A step by step instruction for installation:
+
+Create your MongoDb database on [MLab](https://mlab.com)
 
 Create `config.py` in project root dir:
 
@@ -31,6 +33,13 @@ STATIC_FOLDER = 'static/'
 
 FACE_PLUS_PLUS_API_KEY = 'bkjh234jk32h4vkjh4k2j3hbk42jh'
 FACE_PLUS_PLUS_API_SECRET = '023lk4jhb2lj3h4b8s-aiXp4234kjhb'
+
+DATABASE_HOST = 'ds12345.mlab.com'
+DATABASE_PORT = 27228
+DATABASE_NAME = 'int_20h'
+
+DATABASE_LOGIN = 'admin'
+DATABASE_PASSWORD = 'password'
 ```
 
 Install python packages
