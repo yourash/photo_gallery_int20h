@@ -18,5 +18,3 @@ class PhotosDB:
     @classmethod
     def get_photos(cls):
         return db.photos.find()
-
-
