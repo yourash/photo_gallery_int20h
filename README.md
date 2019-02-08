@@ -66,4 +66,4 @@ TODO
 Developed by [Momentum bots team](https://momentum-bots.top).
 
 * **Anton Yurash** - *Web server development* - [YouRASH](https://github.com/yourash)
-* **Alex Komarsiy** - *Database development* - [TODO]()
+* **Alex Komarsiy** - *Database development* - [Komarskiy](https://github.com/Komarskiy)
