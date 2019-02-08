@@ -25,7 +25,6 @@ class PhotoDataWorker(Thread):
         photos = self.photo_database.get_unchecked_face_photos()
         for photo in photos:
             result = self.face_api.detect_face(photo['url_m']).json()
-            print(result)
             if 'faces' in result:
                 if result['faces']:
                     photo['check_face'] = True

@@ -11,12 +11,13 @@ class PhotosDB:
 
     @classmethod
     def update_photos(cls, photos):
-        for photo in photos[0]:
-            photo['check_face'] = 'False'
-            photo['face'] = ''
-            photo['emotions'] = ''
-            if not db.photos.find_one({"id": photo['id']}):
-                db.photos.insert_one(photo)
+        for album in photos:
+            for photo in album:
+                photo['check_face'] = 'False'
+                photo['face'] = ''
+                photo['emotions'] = ''
+                if not db.photos.find_one({"id": photo['id']}):
+                    db.photos.insert_one(photo)
 
     @classmethod
     def get_photos(cls):
