@@ -27,5 +27,4 @@ class FaceRecognitionApi:
 if __name__ == '__main__':
     face_api = FaceRecognitionApi(config.FACE_PLUS_PLUS_API_KEY,
                                   config.FACE_PLUS_PLUS_API_SECRET)
-    print(face_api.detect_face('https://img.rl0.ru/f3f70ad4661bcac56b285cb86efdea1e/c615x400/'
-                               'news.rambler.ru/img/2018/05/23142637.159422.8999.jpg').text)
+    print(face_api.detect_face('https://farm6.staticflickr.com/5815/29991218784_811fb02a19.jpg').text)
