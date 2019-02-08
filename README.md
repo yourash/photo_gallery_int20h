@@ -59,7 +59,13 @@ Then open [localhost:8080](http://0.0.0.0:8080)
 
 ## Deployment
 
-TODO
+Don't forget to create `config.py`
+
+Run
+```bash
+heroku create
+git push heroku master
+```
 
 ## Developers
 
