@@ -69,7 +69,7 @@ git push heroku master
 
 ## Developers
 
-Developed by [Momentum bots team](https://momentum-bots.top).
+Developed by [Momentum bots](https://momentum-bots.top) team.
 
 * **Anton Yurash** - *Web server development* - [YouRASH](https://github.com/yourash)
 * **Alex Komarsiy** - *Database development* - [Komarskiy](https://github.com/Komarskiy)
