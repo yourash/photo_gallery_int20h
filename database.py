@@ -1,16 +1,22 @@
-import json
+import pymongo
+
+from config import DATABASE_HOST, DATABASE_PORT, DATABASE_NAME, DATABASE_PASSWORD, DATABASE_LOGIN
+
+connection = pymongo.MongoClient(DATABASE_HOST, DATABASE_PORT)
+db = connection[DATABASE_NAME]
+db.authenticate(DATABASE_LOGIN, DATABASE_PASSWORD)
 
 
 class PhotosDB:
 
-    PHOTO_FILE = 'photo_data.json'
+    @classmethod
+    def update_photos(cls, photos):
+        for photo in photos[0]:
+            if not db.photos.find_one({"id": photo['id']}):
+                db.photos.insert_one(photo)
 
     @classmethod
     def get_photos(cls):
-        with open(cls.PHOTO_FILE) as file:
-            return json.load(file)['photos']
+        return db.photos.find()
 
-    @classmethod
-    def update_photos(cls, photos):
-        with open(cls.PHOTO_FILE, 'w') as file:
-            return json.dump({'photos': photos}, file)
+

@@ -11,4 +11,4 @@ class Handler:
 
     @aiohttp_jinja2.template('index.html')
     async def handle_index(self, request):
-        return {'photos': PhotosDB().get_photos()[0]}
+        return {'photos': PhotosDB().get_photos()}
