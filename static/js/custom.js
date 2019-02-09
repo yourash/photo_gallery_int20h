@@ -1,15 +1,15 @@
 setTimeout(function(){
     $('#preloader').fadeOut();
     $('.sk-spinner-wordpress').delay(150).fadeOut('slow');
-}, 1000);
+}, 100);
 
-$.fn.preload = function() {
-    this.each(function(){
-        $('<img/>')[0].src = this;
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function () {
+        $('<img />').attr('src',this).appendTo('body').css('display','none');
     });
-};
+}
 
-$(['home-bg.png']).preload();
+$(['/static/img/home-bg.png']).preload();
 
 function initParallax() {
     $('#home').parallax("50%", 0.3);
