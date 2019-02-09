@@ -63,7 +63,8 @@ python3 webserver.py
 
 Then open [localhost:8080](http://0.0.0.0:8080)
 
-![Result will be like this](https://i.ibb.co/f8X51Qv/Screenshot-from-2019-02-06-20-41-48.png)
+![Main page](https://i.ibb.co/Qbzdnhq/Screenshot-from-2019-02-09-14-19-52.png)
+![Emotions](https://i.ibb.co/ZRQK8m0/Screenshot-from-2019-02-09-14-20-16.png)
 
 ## Deployment
 
