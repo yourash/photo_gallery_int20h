@@ -9,7 +9,7 @@
                <div class="col-md-12 col-sm-12">
                     <h1>Int20h emotions LIVE.</h1>
                     <h4>Made by Momentum bots</h4>
-                    <a href="#photos" class="smoothScroll btn btn-default">Окунуться в атмосферу</a>
+                    <a href="#photos" class="smoothScroll btn btn-default">Улыбайтесь с нами!</a>
                </div>
 
           </div>
@@ -29,7 +29,7 @@
                         <img src="{{photo['url_m']}}" alt="{{photo['title']}}" class="card-img-top img">
                     </a>
                     <div class="card-body">
-                        <h5>Фото с/без эмоции</h5>
+                        <h5>Эмоции: {% for emotion in photo['emotions']%}{{emotions[emotion]}} {% endfor %}</h5>
                         <p class="card-text">{{photo['title']}}</p>
                     </div>
                 </div>

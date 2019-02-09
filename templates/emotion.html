@@ -9,7 +9,7 @@
                         <img src="{{photo['url_m']}}" alt="{{photo['title']}}" class="card-img-top img">
                     </a>
                     <div class="card-body">
-                        <h5>Фото с/без эмоции</h5>
+                        <h5>Эмоции: {% for emotion in photo['emotions']%}{{emotions[emotion]}} {% endfor %}</h5>
                         <p class="card-text">{{photo['title']}}</p>
                     </div>
                 </div>

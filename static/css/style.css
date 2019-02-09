@@ -148,6 +148,7 @@ a:hover, a:active, a:focus {
 .main-home {
   background: url('/static/img/home-bg.png') no-repeat;
   height: 100vh;
+  margin-top: -20px;
 }
 
 

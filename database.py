@@ -20,8 +20,11 @@ class PhotosDB:
                     db.photos.insert_one(photo)
 
     @classmethod
-    def get_photos(cls):
-        return db.photos.find()
+    def get_photos(cls, emotion=None):
+        if not emotion:
+            return db.photos.find()
+        else:
+            return db.photos.find({'emotions': {"$elemMatch": {'$eq': emotion}}})
 
     @classmethod
     def get_unchecked_face_photos(cls):
