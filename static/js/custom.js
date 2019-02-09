@@ -1,7 +1,7 @@
 setTimeout(function(){
     $('#preloader').fadeOut();
     $('.sk-spinner-wordpress').delay(150).fadeOut('slow');
-}, 100);
+}, 1000);
 
 function preload(arrayOfImages) {
     $(arrayOfImages).each(function () {
