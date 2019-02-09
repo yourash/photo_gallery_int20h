@@ -3,3 +3,4 @@ aiohttp-jinja2
 flickrapi
 jinja2
 gunicorn
+pymongo
