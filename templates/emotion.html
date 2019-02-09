@@ -1,26 +1,6 @@
 {% extends "base_template.html" %}
 {% block content %}
-<section id="home" class="main-home parallax-section">
-     <div class="overlay"></div>
-     <div id="particles-js"></div>
-     <div class="container">
-          <div class="row">
-
-               <div class="col-md-12 col-sm-12">
-                    <h1>Int20h emotions LIVE.</h1>
-                    <h4>Made by Momentum bots</h4>
-                    <a href="#photos" class="smoothScroll btn btn-default">Окунуться в атмосферу</a>
-               </div>
-
-          </div>
-     </div>
-</section>
-
-
-<div class="container" id="photos">
-    <div class="spacer">
-        &nbsp;
-    </div>
+<div class="container">
     <div class="row">
         {% for photo in photos %}
             <div class="col-md-6 col-lg-4">

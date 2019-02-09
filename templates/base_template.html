@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Momentum bots INT20H</title>
+    <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Emotions</title>
+
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary shadow">
+
+    <div class="preloader">
+         <div class="sk-spinner sk-spinner-wordpress">
+              <span class="sk-inner-circle"></span>
+         </div>
+    </div>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark shadow">
         <a class="navbar-brand" href="/">
             <img src="/static/img/logo.png" class="d-inline-block align-top logotype" alt="">
         </a>
@@ -39,7 +56,53 @@
         &nbsp;
     </div>
     {% block content %}{% endblock %}
+    <footer>
+         <div class="container">
+              <div class="row">
+
+                   <div class="col-md-5 col-md-offset-1 col-sm-6">
+                        <h3>Momentum bots</h3>
+                        <p>Task for int20h hackathon</p>
+                        <div class="footer-copyright">
+                             <p>Copyright &copy; 2019 Momentum bots</p>
+                        </div>
+                   </div>
+
+                   <div class="col-md-4 col-md-offset-1 col-sm-6">
+                        <h3>Contacts</h3>
+                        <p><i class="fa fa-globe"></i> <a href="https://momentum-bots.top">Momentum bots site</a></p>
+                        <p><i class="fa fa-phone"></i> 380660550435</p>
+                        <p><i class="fa fa-save"></i> momentum.bots@gmail.com</p>
+                   </div>
+
+                  <!--  <div class="clearfix col-md-12 col-sm-12">
+                        <hr>
+                   </div> -->
+
+                   <!-- <div class="col-md-12 col-sm-12">
+                        <ul class="social-icon">
+                             <li><a href="#" class="fa fa-facebook"></a></li>
+                             <li><a href="#" class="fa fa-linkedin"></a></li>
+                        </ul>
+                   </div> -->
+
+              </div>
+         </div>
+    </footer>
+
+    <!-- Back top -->
+    <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
 </body>
-<script src="/static/jquery-3.3.1.min.js"></script>
-<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/particles.min.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/jquery.parallax.js"></script>
+    <script src="/static/js/smoothscroll.js"></script>
+    <script src="/static/js/custom.js"></script>
+
+    <script src="/static/jquery-3.3.1.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 </html>

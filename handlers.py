@@ -11,4 +11,12 @@ class Handler:
 
     @aiohttp_jinja2.template('index.html')
     async def handle_index(self, request):
-        return {'photos': PhotosDB().get_photos()}
+        print('index')
+        photos = await PhotosDB().get_photos()
+        return {'photos': photos}
+
+    @aiohttp_jinja2.template('emotion.html')
+    async def handle_emotion(self, request):
+        print(request.match_info.get('emotion'))
+        photos = await PhotosDB().get_photos()
+        return {'photos': photos}

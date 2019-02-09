@@ -40,6 +40,14 @@ DATABASE_NAME = 'int_20h'
 
 DATABASE_LOGIN = 'admin'
 DATABASE_PASSWORD = 'password'
+
+EMOTIONS = {'anger': 'Гнев',
+            'disgust': 'Отвращение',
+            'fear': 'Страх',
+            'happiness': 'Счастье',
+            'neutral': 'Нейтральный',
+            'sadness': 'Печаль',
+            'surprise': 'Удивленный'}
 ```
 
 Install python packages
