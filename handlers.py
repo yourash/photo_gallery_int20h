@@ -20,6 +20,9 @@ class Handler:
         return {'photos': photos, 'emotions': config.EMOTIONS}
 
     @aiohttp_jinja2.template('emotion.html')
-    async def handle_all(self, request):
-        photos = PhotosDB().get_photos()
+    async def global_filter(self, request):
+        if request.match_info.get('global_filter') == 'all':
+            photos = PhotosDB().get_photos()
+        elif request.match_info.get('global_filter') == 'faces':
+            photos = PhotosDB().get_photos(only_faces=True)
         return {'photos': photos, 'emotions': config.EMOTIONS}

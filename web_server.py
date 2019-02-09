@@ -9,7 +9,7 @@ app.router.add_static('/static', config.STATIC_FOLDER)
 
 handler = Handler(app)
 app.add_routes([get('/', handler.handle_index),
-                get('/all', handler.handle_all),
+                get('/{global_filter}', handler.global_filter),
                 get('/emotion/{emotion}', handler.handle_emotion)])
 
 if __name__ == '__main__':

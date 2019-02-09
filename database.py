@@ -20,7 +20,9 @@ class PhotosDB:
                     db.photos.insert_one(photo)
 
     @classmethod
-    def get_photos(cls, emotion=None):
+    def get_photos(cls, emotion=None, only_faces=False):
+        if only_faces:
+            return db.photos.find({'face': True})
         if not emotion:
             return db.photos.find()
         else:
