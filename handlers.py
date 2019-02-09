@@ -21,6 +21,7 @@ class Handler:
 
     @aiohttp_jinja2.template('emotion.html')
     async def global_filter(self, request):
+        photos = []
         if request.match_info.get('global_filter') == 'all':
             photos = PhotosDB().get_photos()
         elif request.match_info.get('global_filter') == 'faces':

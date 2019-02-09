@@ -3,6 +3,14 @@ setTimeout(function(){
     $('.sk-spinner-wordpress').delay(150).fadeOut('slow');
 }, 1000);
 
+$.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+    });
+};
+
+$(['home-bg.png']).preload();
+
 function initParallax() {
     $('#home').parallax("50%", 0.3);
 }
